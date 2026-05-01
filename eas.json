@@ -1,0 +1,63 @@
+{
+  "cli": {
+    "version": ">= 12.0.0",
+    "appVersionSource": "local"
+  },
+  "build": {
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease"
+      },
+      "ios": {
+        "simulator": false
+      },
+      "env": {
+        "EXPO_PUBLIC_SUPABASE_URL": "https://isvxscoyczqjyyzxisvx.backend.onspace.ai",
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlzdnhzY295Y3pxanl5enhpc3Z4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU1MDIwMjIsImV4cCI6MjA2MTA3ODAyMn0.s_aWBhShnqDYCEiqT0JxxrPBYXq9UYnkZ2Ud0P5u3g8"
+      }
+    },
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleDebug"
+      },
+      "ios": {
+        "simulator": true
+      },
+      "env": {
+        "EXPO_PUBLIC_SUPABASE_URL": "https://isvxscoyczqjyyzxisvx.backend.onspace.ai",
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlzdnhzY295Y3pxanl5enhpc3Z4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU1MDIwMjIsImV4cCI6MjA2MTA3ODAyMn0.s_aWBhShnqDYCEiqT0JxxrPBYXq9UYnkZ2Ud0P5u3g8"
+      }
+    },
+    "production": {
+      "distribution": "store",
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "ios": {
+        "simulator": false
+      },
+      "env": {
+        "EXPO_PUBLIC_SUPABASE_URL": "https://isvxscoyczqjyyzxisvx.backend.onspace.ai",
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlzdnhzY295Y3pxanl5enhpc3Z4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU1MDIwMjIsImV4cCI6MjA2MTA3ODAyMn0.s_aWBhShnqDYCEiqT0JxxrPBYXq9UYnkZ2Ud0P5u3g8"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "android": {
+        "serviceAccountKeyPath": "./google-service-account.json",
+        "track": "internal"
+      },
+      "ios": {
+        "appleId": "YOUR_APPLE_ID@example.com",
+        "ascAppId": "YOUR_ASC_APP_ID",
+        "appleTeamId": "YOUR_APPLE_TEAM_ID"
+      }
+    }
+  }
+}
