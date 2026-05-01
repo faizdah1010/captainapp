@@ -1,23 +1,8 @@
 {
   "cli": {
-    "version": ">= 12.0.0",
-    "appVersionSource": "local"
+    "version": ">= 12.0.0"
   },
   "build": {
-    "preview": {
-      "distribution": "internal",
-      "android": {
-        "buildType": "apk",
-        "gradleCommand": ":app:assembleRelease"
-      },
-      "ios": {
-        "simulator": false
-      },
-      "env": {
-        "EXPO_PUBLIC_SUPABASE_URL": "https://isvxscoyczqjyyzxisvx.backend.onspace.ai",
-        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlzdnhzY295Y3pxanl5enhpc3Z4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU1MDIwMjIsImV4cCI6MjA2MTA3ODAyMn0.s_aWBhShnqDYCEiqT0JxxrPBYXq9UYnkZ2Ud0P5u3g8"
-      }
-    },
     "development": {
       "developmentClient": true,
       "distribution": "internal",
@@ -29,8 +14,19 @@
         "simulator": true
       },
       "env": {
-        "EXPO_PUBLIC_SUPABASE_URL": "https://isvxscoyczqjyyzxisvx.backend.onspace.ai",
-        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlzdnhzY295Y3pxanl5enhpc3Z4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU1MDIwMjIsImV4cCI6MjA2MTA3ODAyMn0.s_aWBhShnqDYCEiqT0JxxrPBYXq9UYnkZ2Ud0P5u3g8"
+        "APP_ENV": "development"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "simulator": false
+      },
+      "env": {
+        "APP_ENV": "preview"
       }
     },
     "production": {
@@ -42,8 +38,7 @@
         "simulator": false
       },
       "env": {
-        "EXPO_PUBLIC_SUPABASE_URL": "https://isvxscoyczqjyyzxisvx.backend.onspace.ai",
-        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlzdnhzY295Y3pxanl5enhpc3Z4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU1MDIwMjIsImV4cCI6MjA2MTA3ODAyMn0.s_aWBhShnqDYCEiqT0JxxrPBYXq9UYnkZ2Ud0P5u3g8"
+        "APP_ENV": "production"
       }
     }
   },

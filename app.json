@@ -1,81 +1,74 @@
 {
   "expo": {
-    "name": "طريقي - كابتن",
-    "slug": "tariq-captain",
+    "name": "طريقي",
+    "slug": "tariqy-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "notification": {
-      "icon": "./assets/notification-icon.png",
-      "color": "#CC1020",
-      "androidMode": "collapse",
-      "androidCollapsedTitle": "طريقي - كابتن"
-    },
-    "userInterfaceStyle": "dark",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#0D0002"
-    },
-    "assetBundlePatterns": ["**/*"],
-    "scheme": "tariq-captain",
+    "icon": "./assets/images/icon.png",
+    "scheme": "tariqyapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.tariq.captain",
-      "infoPlist": {
-        "NSLocationWhenInUseUsageDescription": "نحتاج موقعك لعرضه للركاب وتحديث موقعك على الخريطة",
-        "NSLocationAlwaysAndWhenInUseUsageDescription": "نحتاج موقعك في الخلفية لتحديثه للركاب أثناء الرحلة",
-        "NSFaceIDUsageDescription": "للدخول السريع إلى التطبيق"
-      }
+      "bundleIdentifier": "com.tariqy.app"
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#0D0002"
-      },
-      "package": "com.tariq.captain",
       "config": {
         "googleMaps": {
           "apiKey": "AIzaSyDZeUFnQWV1zfeHBsExMRZ5F5zFyU1oj5o"
         }
       },
-      "permissions": [
-        "android.permission.ACCESS_FINE_LOCATION",
-        "android.permission.ACCESS_COARSE_LOCATION",
-        "android.permission.ACCESS_BACKGROUND_LOCATION",
-        "android.permission.RECEIVE_BOOT_COMPLETED",
-        "android.permission.VIBRATE",
-        "android.permission.POST_NOTIFICATIONS"
-      ]
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.tariqy.app",
+      "edgeToEdgeEnabled": true
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/icon.png"
     },
     "plugins": [
       "expo-router",
-      "expo-secure-store",
       [
-        "expo-location",
+        "expo-splash-screen",
         {
-          "locationAlwaysAndWhenInUsePermission": "يحتاج التطبيق إلى موقعك لمشاركته مع الركاب.",
-          "locationAlwaysPermission": "يحتاج التطبيق إلى موقعك في الخلفية.",
-          "locationWhenInUsePermission": "يحتاج التطبيق إلى موقعك أثناء الاستخدام.",
-          "isIosBackgroundLocationEnabled": true
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 250,
+          "resizeMode": "contain",
+          "backgroundColor": "#FFFFFF"
         }
+      ],
+      "expo-web-browser",
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "يستخدم التطبيق Face ID لتسجيل الدخول بشكل آمن وسريع"
+        }
+      ],
+      [
+        "expo-secure-store"
       ],
       [
         "expo-notifications",
         {
-          "icon": "./assets/notification-icon.png",
+          "icon": "./assets/images/icon.png",
           "color": "#CC1020",
           "sounds": []
         }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "يحتاج التطبيق للوصول لمكتبة الصور لتحديث صورة ملفك الشخصي",
+          "cameraPermission": "يحتاج التطبيق للكاميرا لالتقاط صورة ملفك الشخصي"
+        }
       ]
     ],
-    "extra": {
-      "eas": {
-        "projectId": "YOUR_EAS_PROJECT_ID"
-      }
+    "experiments": {
+      "typedRoutes": true
     }
   }
 }
